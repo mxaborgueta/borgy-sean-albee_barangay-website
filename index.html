@@ -29,7 +29,6 @@
       }
 
       .site-navbar .navbar-item,
-      .site-navbar .navbar-link,
       .site-navbar .navbar-burger {
         color: #fff !important;
       }
@@ -82,11 +81,6 @@
         border-radius: 4px;
       }
 
-      .service-card {
-        height: 100%;
-        border-radius: 12px;
-      }
-
       .icon-badge {
         width: 56px;
         height: 56px;
@@ -114,6 +108,13 @@
         color: #fff;
       }
 
+      .stat-list,
+      .footer-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
       @media screen and (max-width: 1023px) {
         .site-navbar .navbar-menu {
           background: #0b3d91;
@@ -122,52 +123,48 @@
     </style>
   </head>
   <body>
-    <nav class="navbar site-navbar is-fixed-top" role="navigation" aria-label="main navigation">
-      <div class="container">
-        <div class="navbar-brand">
+    <header>
+      <nav class="navbar site-navbar is-fixed-top" aria-label="Main">
+        <p class="navbar-brand">
           <a class="navbar-item has-text-weight-bold" href="index.html">
             <span class="brand-mark">SF</span>
             Barangay San Francisco
           </a>
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
-        </div>
-        <div class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item is-active" href="index.html">Home</a>
-            <a class="navbar-item" href="officials.html">Officials</a>
-            <a class="navbar-item" href="contact.html">Contact</a>
-          </div>
-        </div>
-      </div>
-    </nav>
+        </p>
+        <ul class="navbar-menu navbar-end">
+          <li><a class="navbar-item is-active" href="index.html">Home</a></li>
+          <li><a class="navbar-item" href="officials.html">Officials</a></li>
+          <li><a class="navbar-item" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-    <section class="hero is-medium hero-home">
-      <div class="hero-body">
-        <div class="container">
+      <section class="hero is-medium hero-home">
+        <div class="hero-body container">
           <p class="subtitle is-5 mb-2">Mabuhay!</p>
           <h1 class="title is-1 is-size-3-mobile">Barangay San Francisco</h1>
           <p class="subtitle is-4 is-size-6-mobile">
             A safe, united, and service-oriented community.
           </p>
-          <div class="buttons mt-4">
+          <p class="buttons mt-4">
             <a class="button is-warning has-text-weight-semibold" href="officials.html">
               Meet Our Officials
             </a>
-            <a class="button is-light" href="contact.html">Contact us</a>
-          </div>
+            <a class="button is-light" href="contact.html">Visit the Hall</a>
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
+    </header>
 
-    <section class="section">
-      <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column is-6">
+    <main>
+      <section class="section">
+        <div class="container columns is-vcentered">
+          <article class="column is-6">
             <h2 class="title is-3 section-title">About Our Barangay</h2>
             <p class="mb-4">
               Barangay San Francisco is committed to transparent public service,
@@ -179,161 +176,158 @@
               get help from health, youth, and disaster-preparedness teams at
               the Barangay Hall.
             </p>
-            <div class="columns is-mobile is-multiline">
-              <div class="column is-4 has-text-centered">
-                <p class="title is-4 has-text-link">12</p>
+            <ul class="stat-list columns is-mobile">
+              <li class="column has-text-centered">
+                <strong class="title is-4 has-text-link">12</strong>
                 <p class="is-size-7">Puroks</p>
-              </div>
-              <div class="column is-4 has-text-centered">
-                <p class="title is-4 has-text-link">24/7</p>
+              </li>
+              <li class="column has-text-centered">
+                <strong class="title is-4 has-text-link">24/7</strong>
                 <p class="is-size-7">Tanod Desk</p>
-              </div>
-              <div class="column is-4 has-text-centered">
-                <p class="title is-4 has-text-link">Mon–Fri</p>
+              </li>
+              <li class="column has-text-centered">
+                <strong class="title is-4 has-text-link">Mon–Fri</strong>
                 <p class="is-size-7">Hall Hours</p>
-              </div>
-            </div>
-          </div>
-          <div class="column is-6">
-            <div class="notification hours-box">
-              <p class="title is-5">Office Hours</p>
-              <p><strong>Monday to Friday:</strong> 8:00 AM – 5:00 PM</p>
-              <p><strong>Saturday:</strong> 8:00 AM – 12:00 NN</p>
-              <p><strong>Sunday &amp; Holidays:</strong> Closed (emergency desk open)</p>
-              <hr />
-              <p class="is-size-7">
-                Bring a valid ID when requesting barangay documents.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+              </li>
+            </ul>
+          </article>
 
-    <section class="section has-background-white">
-      <div class="container">
-        <h2 class="title is-3 section-title">Barangay Services</h2>
-        <div class="columns is-multiline">
-          <div class="column is-4">
-            <div class="box service-card">
-              <div class="icon-badge"><i class="fa-solid fa-file-lines"></i></div>
-              <h3 class="title is-5">Documents</h3>
-              <p>
-                Barangay clearance, certificate of residency, certificate of
-                indigency, and business clearance.
-              </p>
-            </div>
-          </div>
-          <div class="column is-4">
-            <div class="box service-card">
-              <div class="icon-badge"><i class="fa-solid fa-heart-pulse"></i></div>
-              <h3 class="title is-5">Health Desk</h3>
-              <p>
-                Health station visits, immunization schedules, and senior citizen
-                assistance referrals.
-              </p>
-            </div>
-          </div>
-          <div class="column is-4">
-            <div class="box service-card">
-              <div class="icon-badge"><i class="fa-solid fa-shield-halved"></i></div>
-              <h3 class="title is-5">Peace &amp; Order</h3>
-              <p>
-                Barangay tanod patrols, blotter assistance, and community
-                mediation.
-              </p>
-            </div>
-          </div>
-          <div class="column is-4">
-            <div class="box service-card">
-              <div class="icon-badge"><i class="fa-solid fa-children"></i></div>
-              <h3 class="title is-5">Youth &amp; Sports</h3>
-              <p>
-                SK programs, after-school activities, and barangay sports
-                events.
-              </p>
-            </div>
-          </div>
-          <div class="column is-4">
-            <div class="box service-card">
-              <div class="icon-badge"><i class="fa-solid fa-cloud-sun-rain"></i></div>
-              <h3 class="title is-5">Disaster Ready</h3>
-              <p>
-                Evacuation guidance, relief coordination, and weather
-                advisories.
-              </p>
-            </div>
-          </div>
-          <div class="column is-4">
-            <div class="box service-card">
-              <div class="icon-badge"><i class="fa-solid fa-recycle"></i></div>
-              <h3 class="title is-5">Clean &amp; Green</h3>
-              <p>
-                Garbage collection schedule, recycling drive, and tree-planting
-                days.
-              </p>
-            </div>
-          </div>
+          <aside class="column is-6 notification hours-box">
+            <h3 class="title is-5">Office Hours</h3>
+            <p><strong>Monday to Friday:</strong> 8:00 AM – 5:00 PM</p>
+            <p><strong>Saturday:</strong> 8:00 AM – 12:00 NN</p>
+            <p><strong>Sunday &amp; Holidays:</strong> Closed (emergency desk open)</p>
+            <hr />
+            <p class="is-size-7">Bring a valid ID when requesting barangay documents.</p>
+          </aside>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-3 section-title">Announcements</h2>
-        <article class="message is-link">
-          <div class="message-header">
-            <p>Community Clean-Up — Saturday, 7:00 AM</p>
-          </div>
-          <div class="message-body">
-            Join the monthly clean-up at the barangay plaza. Bring gloves and
-            wear comfortable clothes. Snacks will be provided.
-          </div>
-        </article>
-        <article class="message is-warning">
-          <div class="message-header">
-            <p>Free Medical Check-up</p>
-          </div>
-          <div class="message-body">
-            The health station will hold a free blood-pressure and consultation
-            day this Friday from 8:00 AM to 12:00 NN.
-          </div>
-        </article>
-        <article class="message is-success">
-          <div class="message-header">
-            <p>Youth Sports Clinic</p>
-          </div>
-          <div class="message-body">
-            The Sangguniang Kabataan invites students ages 10–17 to a basketball
-            and volleyball clinic at the covered court.
-          </div>
-        </article>
-      </div>
-    </section>
+      <section class="section has-background-white">
+        <div class="container">
+          <h2 class="title is-3 section-title">Barangay Services</h2>
+          <ul class="columns is-multiline">
+            <li class="column is-4">
+              <article class="box">
+                <p class="icon-badge"><i class="fa-solid fa-file-lines"></i></p>
+                <h3 class="title is-5">Documents</h3>
+                <p>
+                  Barangay clearance, certificate of residency, certificate of
+                  indigency, and business clearance.
+                </p>
+              </article>
+            </li>
+            <li class="column is-4">
+              <article class="box">
+                <p class="icon-badge"><i class="fa-solid fa-heart-pulse"></i></p>
+                <h3 class="title is-5">Health Desk</h3>
+                <p>
+                  Health station visits, immunization schedules, and senior citizen
+                  assistance referrals.
+                </p>
+              </article>
+            </li>
+            <li class="column is-4">
+              <article class="box">
+                <p class="icon-badge"><i class="fa-solid fa-shield-halved"></i></p>
+                <h3 class="title is-5">Peace &amp; Order</h3>
+                <p>
+                  Barangay tanod patrols, blotter assistance, and community
+                  mediation.
+                </p>
+              </article>
+            </li>
+            <li class="column is-4">
+              <article class="box">
+                <p class="icon-badge"><i class="fa-solid fa-children"></i></p>
+                <h3 class="title is-5">Youth &amp; Sports</h3>
+                <p>
+                  SK programs, after-school activities, and barangay sports
+                  events.
+                </p>
+              </article>
+            </li>
+            <li class="column is-4">
+              <article class="box">
+                <p class="icon-badge"><i class="fa-solid fa-cloud-sun-rain"></i></p>
+                <h3 class="title is-5">Disaster Ready</h3>
+                <p>
+                  Evacuation guidance, relief coordination, and weather
+                  advisories.
+                </p>
+              </article>
+            </li>
+            <li class="column is-4">
+              <article class="box">
+                <p class="icon-badge"><i class="fa-solid fa-recycle"></i></p>
+                <h3 class="title is-5">Clean &amp; Green</h3>
+                <p>
+                  Garbage collection schedule, recycling drive, and tree-planting
+                  days.
+                </p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="title is-3 section-title">Announcements</h2>
+          <article class="message is-link">
+            <header class="message-header">
+              <h3>Community Clean-Up — Saturday, 7:00 AM</h3>
+            </header>
+            <p class="message-body">
+              Join the monthly clean-up at the barangay plaza. Bring gloves and
+              wear comfortable clothes. Snacks will be provided.
+            </p>
+          </article>
+          <article class="message is-warning">
+            <header class="message-header">
+              <h3>Free Medical Check-up</h3>
+            </header>
+            <p class="message-body">
+              The health station will hold a free blood-pressure and consultation
+              day this Friday from 8:00 AM to 12:00 NN.
+            </p>
+          </article>
+          <article class="message is-success">
+            <header class="message-header">
+              <h3>Youth Sports Clinic</h3>
+            </header>
+            <p class="message-body">
+              The Sangguniang Kabataan invites students ages 10–17 to a basketball
+              and volleyball clinic at the covered court.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer site-footer">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <p class="has-text-weight-bold is-size-5">Barangay San Francisco</p>
-            <p>Official community website</p>
-          </div>
-          <div class="column">
-            <p class="has-text-weight-semibold">Pages</p>
-            <p><a href="index.html">Home</a></p>
-            <p><a href="officials.html">Officials</a></p>
-            <p><a href="contact.html">Contact</a></p>
-          </div>
-          <div class="column">
-            <p class="has-text-weight-semibold">Hall</p>
-            <p>Barangay Hall, San Francisco</p>
-            <p>Mon–Fri, 8:00 AM – 5:00 PM</p>
-          </div>
-        </div>
-        <p class="has-text-centered is-size-7 mt-4">
-          &copy; 2026 Barangay San Francisco. Built with Bulma CSS.
-        </p>
+      <div class="container columns">
+        <section class="column">
+          <h2 class="has-text-weight-bold is-size-5">Barangay San Francisco</h2>
+          <p>Official community website</p>
+        </section>
+        <nav class="column" aria-label="Footer">
+          <h2 class="has-text-weight-semibold">Pages</h2>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="officials.html">Officials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <address class="column">
+          <h2 class="has-text-weight-semibold">Hall</h2>
+          <p>Barangay Hall, San Francisco</p>
+          <p>Mon–Fri, 8:00 AM – 5:00 PM</p>
+        </address>
       </div>
+      <p class="has-text-centered is-size-7 mt-4">
+        &copy; 2026 Barangay San Francisco. Built with Bulma CSS.
+      </p>
     </footer>
   </body>
 </html>
