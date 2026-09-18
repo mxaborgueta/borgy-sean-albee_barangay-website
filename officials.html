@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Barangay San Francisco | Official Website</title>
+    <title>Officials | Barangay San Francisco</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
@@ -12,27 +12,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-<style>
+    <style>
       :root {
         --sf-blue: #0b3d91;
         --sf-gold: #f4c430;
         --sf-sky: #e8f1ff;
       }
 
+      html {
+        scroll-behavior: auto;
+      }
+
       body {
         background: #f6f8fb;
-        padding-top: 4.5rem;
+        padding-top: 3.25rem;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      section[id], article[id] {
-        scroll-margin-top: 5rem;
       }
 
       #officials {
@@ -69,20 +65,6 @@
         margin-right: 0.6rem;
       }
 
-      .hero-home {
-        background:
-          linear-gradient(120deg, rgba(11, 61, 145, 0.92), rgba(20, 90, 180, 0.78)),
-          url("https://images.unsplash.com/photo-1526481280695-3c46947924a2?auto=format&fit=crop&w=1600&q=70")
-            center / cover no-repeat;
-        color: #fff;
-        margin-top: 3.25rem;
-      }
-
-      .hero-home .title,
-      .hero-home .subtitle {
-        color: #fff;
-      }
-
       .section-title {
         display: inline-block;
         margin-bottom: 1.5rem;
@@ -98,29 +80,6 @@
         border-radius: 4px;
       }
 
-      .service-card {
-        height: 100%;
-        border-radius: 12px;
-      }
-
-      .icon-badge {
-        width: 56px;
-        height: 56px;
-        border-radius: 14px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--sf-sky);
-        color: var(--sf-blue);
-        font-size: 1.4rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .hours-box {
-        background: #fff;
-        border-left: 5px solid var(--sf-gold);
-      }
-
       .site-footer {
         background: #07285f;
         color: #dbe7ff;
@@ -130,67 +89,125 @@
         color: #fff;
       }
 
+      .footer-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .navbar-burger {
+        cursor: pointer;
+      }
+
+      .navbar-burger,
+      .navbar-burger span,
+      .navbar-burger.is-active span,
+      .nav-toggle:checked ~ .navbar-brand .navbar-burger span {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+      }
+
       @media screen and (max-width: 1023px) {
         .site-navbar .navbar-menu {
           background: #0b3d91;
+        }
+
+        .nav-toggle:checked ~ .navbar-menu {
+          display: block;
         }
       }
     </style>
   </head>
   <body>
-      <nav class="navbar site-navbar is-fixed-top" aria-label="Main">
-        <p class="navbar-brand">
-          <a class="navbar-item has-text-weight-bold" href="index.html">
-            <span class="brand-mark">SF</span>
-            Barangay San Francisco
-          </a>
-          <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </p>
-        <ul class="navbar-menu navbar-end">
-          <li><a class="navbar-item" href="index.html">Home</a></li>
-          <li><a class="navbar-item is-active" href="officials.html">Officials</a></li>
-          <li><a class="navbar-item" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
- <section id="officials" class="section">
-    <div class="container">
-      <div class="columns is-multiline is-centered">
-        <article class="column is-half" id="president">
-          <div class="card-content">
-            <img src="assets/_120791258_4c8bb61b-e348-4958-b4f6-5f4cffc22039.jpg" alt="CAPTAIN" class="image">
-            <p class="title is-3">Barangay Captain</p>
-            <p class="subtitle is-4"> Max Borgueta</p>
-          </div>
-        </article>
-        <article class="column is-half" id="vice-president">
-          <div class="card-content">
-            <img src="assets/Sara-Duterte-8.jpg" alt="Vice-Captain" class="image">
-            <p class="title is-3">Vice-Captain</p>
-            <p class="subtitle is-4">Janver Cabahug</p>
-          </div>
-        </article>
-        <article class="column is-half" id="secretary">
-          <div class="card-content">
-            <img src="assets/martin-romualdez-filephoto-021123.jpg" alt="Secretary" class="image">
-            <p class="title is-3">Secretary</p>
-            <p class="subtitle is-4">Martin Romuladez</p>
-          </div>
-        </article>
-        <article class="column is-half" id="treasurer">
-          <div class="card-content">
-            <img src="assets/M5HH2ICPPNLDFNOCAIAV6DLZXY.jpg" alt="TREASURER" class="image">
-            <p class="title is-3">Treasurer</p>
-            <p class="subtitle is-4">Sean Stephen L. Buenavista</p>
-          </div>
-        </article>
+    <nav class="navbar site-navbar is-fixed-top" aria-label="Main">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <p class="navbar-brand">
+        <a class="navbar-item has-text-weight-bold" href="index.html">
+          <span class="brand-mark">SF</span>
+          Barangay San Francisco
+        </a>
+        <label class="navbar-burger" for="nav-toggle" aria-label="Open menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </label>
+      </p>
+      <ul class="navbar-menu">
+        <li class="navbar-end">
+          <a class="navbar-item" href="index.html">Home</a>
+          <a class="navbar-item is-active" href="officials.html">Officials</a>
+          <a class="navbar-item" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="officials" class="section">
+      <div class="container">
+        <h1 class="title is-3 section-title">Barangay Officials</h1>
+        <div class="columns is-multiline is-centered">
+          <article class="column is-half" id="president">
+            <div class="card-content">
+              <img
+                src="assets/_120791258_4c8bb61b-e348-4958-b4f6-5f4cffc22039.jpg"
+                alt="Barangay Captain"
+                class="image"
+              />
+              <p class="title is-3">Barangay Captain</p>
+              <p class="subtitle is-4">Max Borgueta</p>
+            </div>
+          </article>
+          <article class="column is-half" id="vice-president">
+            <div class="card-content">
+              <img
+                src="assets/Sara-Duterte-8.jpg"
+                alt="Vice-Captain"
+                class="image"
+              />
+              <p class="title is-3">Vice-Captain</p>
+              <p class="subtitle is-4">Janver Cabahug</p>
+            </div>
+          </article>
+          <article class="column is-half" id="secretary">
+            <div class="card-content">
+              <img
+                src="assets/martin-romualdez-filephoto-021123.jpg"
+                alt="Secretary"
+                class="image"
+              />
+              <p class="title is-3">Secretary</p>
+              <p class="subtitle is-4">Martin Romuladez</p>
+            </div>
+          </article>
+          <article class="column is-half" id="treasurer">
+            <div class="card-content">
+              <img
+                src="assets/M5HH2ICPPNLDFNOCAIAV6DLZXY.jpg"
+                alt="Treasurer"
+                class="image"
+              />
+              <p class="title is-3">Treasurer</p>
+              <p class="subtitle is-4">Sean Stephen L. Buenavista</p>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-</section>
+    </section>
+
     <footer class="footer site-footer">
       <div class="container columns">
         <section class="column">
