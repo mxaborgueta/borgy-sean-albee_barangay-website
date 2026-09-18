@@ -5,11 +5,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gate G1 — Barangay Profile</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+      <style>
+      :root {
+        --sf-blue: #0b3d91;
+        --sf-gold: #f4c430;
+        --sf-sky: #e8f1ff;
+      }
+
+      body {
+        background: #f6f8fb;
+      }
+
+      .site-navbar {
+        background: var(--sf-blue) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .site-navbar .navbar-item,
+      .site-navbar .navbar-link,
+      .site-navbar .navbar-burger {
+        color: #fff !important;
+      }
+
+      .site-navbar .navbar-item:hover,
+      .site-navbar .navbar-item.is-active {
+        background: rgba(255, 255, 255, 0.12) !important;
+        color: var(--sf-gold) !important;
+      }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--sf-gold);
+        color: var(--sf-blue);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        margin-right: 0.6rem;
+      }
+
+      .hero-home {
+        background:
+          linear-gradient(120deg, rgba(11, 61, 145, 0.92), rgba(20, 90, 180, 0.78)),
+          url("https://images.unsplash.com/photo-1526481280695-3c46947924a2?auto=format&fit=crop&w=1600&q=70")
+            center / cover no-repeat;
+        color: #fff;
+        margin-top: 3.25rem;
+      }
+
+      .hero-home .title,
+      .hero-home .subtitle {
+        color: #fff;
+      }
+
+      .section-title {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 4px;
+        background: var(--sf-gold);
+        margin-top: 0.45rem;
+        border-radius: 4px;
+      }
+
+      .service-card {
+        height: 100%;
+        border-radius: 12px;
+      }
+
+      .icon-badge {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--sf-sky);
+        color: var(--sf-blue);
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .hours-box {
+        background: #fff;
+        border-left: 5px solid var(--sf-gold);
+      }
+
+      .site-footer {
+        background: #07285f;
+        color: #dbe7ff;
+      }
+
+      .site-footer a {
+        color: #fff;
+      }
+
+      @media screen and (max-width: 1023px) {
+        .site-navbar .navbar-menu {
+          background: #0b3d91;
+        }
+      }
+    </style>
 </head>
 <body>
-    <form>
-        <div>
-            <label>Name</label>
+        <nav class="navbar site-navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item has-text-weight-bold" href="index.html">
+            <span class="brand-mark">SF</span>
+            Barangay San Francisco
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-active" href="index.html">Home</a>
+            <a class="navbar-item" href="officials.html">Officials</a>
+            <a class="navbar-item" href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+        <section class="hero is-medium hero-home">
+      </div>
+    </section>
+    <form class="box">
+        <p class="has-text-centered is-size-3-mobile">Submit a Form for your Concerns: </p>
+        <div class="has-text-light">
+            <label class="has-text-black">Name</label>
             <input class="input" type="input" placeholder="Input Your Name">
         </div>
         <br>
@@ -27,7 +163,35 @@
             <labe>Concern</labe>
             <textarea class="textarea" rows="4"></textarea>
         </div>
+
+        <button class="button is-primary" type="submit">Submit</button>
+        <button class="button is-primary" type="reset">Clear</button>
         
     </form>
+    <p class="is-size-5 box"> Any concerns will be helpful towards the safety of our Barangay and for everyone's voice to be heard! <3 </p>
+ <footer class="footer site-footer">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <p class="has-text-weight-bold is-size-5">Barangay San Francisco</p>
+            <p>Official community website</p>
+          </div>
+          <div class="column">
+            <p class="has-text-weight-semibold">Pages</p>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="officials.html">Officials</a></p>
+            <p><a href="contact.html">Contact</a></p>
+          </div>
+          <div class="column">
+            <p class="has-text-weight-semibold">Hall</p>
+            <p>Barangay Hall, San Francisco</p>
+            <p>Mon–Fri, 8:00 AM – 5:00 PM</p>
+          </div>
+        </div>
+        <p class="has-text-centered is-size-7 mt-4">
+          &copy; 2026 Barangay San Francisco. Built with Bulma CSS.
+        </p>
+      </div>
+    </footer>
 </body>
 </html>
