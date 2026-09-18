@@ -10,9 +10,9 @@ This pull request adds/fixes/updates...
 
 <!-- Put an 'x' in the boxes that apply -->
 
-- [ ] Bug fix (fixes an issue)
-- [ ] New feature (adds functionality)
-- [ ] Documentation update
+- [x] Bug fix (fixes an issue)
+- [x] New feature (adds functionality)
+- [x] Documentation update
 - [ ] Code cleanup/refactoring
 - [ ] Other (please describe):
 
@@ -28,9 +28,9 @@ This pull request adds/fixes/updates...
 
 <!-- How did you test these changes? -->
 
-- [ ] Tested on Chrome
+- [x] Tested on Chrome
 - [ ] Tested on Firefox
-- [ ] Tested on mobile device
+- [x] Tested on mobile device
 - [ ] All existing features still work
 - [ ] No console errors
 

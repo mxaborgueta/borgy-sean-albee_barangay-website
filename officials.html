@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Officials | Barangay San Francisco</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      :root {
+        --sf-blue: #0b3d91;
+        --sf-gold: #f4c430;
+        --sf-sky: #e8f1ff;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      body {
+        background: #f6f8fb;
+        padding-top: 3.25rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #officials {
+        flex: 1;
+      }
+
+      .site-navbar {
+        background: var(--sf-blue) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .site-navbar .navbar-item,
+      .site-navbar .navbar-link,
+      .site-navbar .navbar-burger {
+        color: #fff !important;
+      }
+
+      .site-navbar .navbar-item:hover,
+      .site-navbar .navbar-item.is-active {
+        background: rgba(255, 255, 255, 0.12) !important;
+        color: var(--sf-gold) !important;
+      }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--sf-gold);
+        color: var(--sf-blue);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        margin-right: 0.6rem;
+      }
+
+      .section-title {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 4px;
+        background: var(--sf-gold);
+        margin-top: 0.45rem;
+        border-radius: 4px;
+      }
+
+      .site-footer {
+        background: #07285f;
+        color: #dbe7ff;
+      }
+
+      .site-footer a {
+        color: #fff;
+      }
+
+      .footer-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .navbar-burger {
+        cursor: pointer;
+      }
+
+      .navbar-burger,
+      .navbar-burger span,
+      .navbar-burger.is-active span,
+      .nav-toggle:checked ~ .navbar-brand .navbar-burger span {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+      }
+
+      @media screen and (max-width: 1023px) {
+        .site-navbar .navbar-menu {
+          background: #0b3d91;
+        }
+
+        .nav-toggle:checked ~ .navbar-menu {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar site-navbar is-fixed-top" aria-label="Main">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <p class="navbar-brand">
+        <a class="navbar-item has-text-weight-bold" href="index.html">
+          <span class="brand-mark">SF</span>
+          Barangay San Francisco
+        </a>
+        <label class="navbar-burger" for="nav-toggle" aria-label="Open menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </label>
+      </p>
+      <ul class="navbar-menu">
+        <li class="navbar-end">
+          <a class="navbar-item" href="index.html">Home</a>
+          <a class="navbar-item is-active" href="officials.html">Officials</a>
+          <a class="navbar-item" href="contact.html">Contact</a>
+          <a class="navbar-item" href="vision.html">Vision</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="officials" class="section">
+      <div class="container">
+        <h1 class="title is-3 section-title">Barangay Officials</h1>
+        <div class="columns is-multiline is-centered">
+          <article class="column is-half" id="president">
+            <div class="card-content">
+              <img
+                src="assets/_120791258_4c8bb61b-e348-4958-b4f6-5f4cffc22039.jpg"
+                alt="Barangay Captain"
+                class="image"
+              />
+              <p class="title is-3">Barangay Captain</p>
+              <p class="subtitle is-4">Max Borgueta</p>
+            </div>
+          </article>
+          <article class="column is-half" id="vice-president">
+            <div class="card-content">
+              <img
+                src="assets/Sara-Duterte-8.jpg"
+                alt="Vice-Captain"
+                class="image"
+              />
+              <p class="title is-3">Vice-Captain</p>
+              <p class="subtitle is-4">Janver Cabahug</p>
+            </div>
+          </article>
+          <article class="column is-half" id="secretary">
+            <div class="card-content">
+              <img
+                src="assets/martin-romualdez-filephoto-021123.jpg"
+                alt="Secretary"
+                class="image"
+              />
+              <p class="title is-3">Secretary</p>
+              <p class="subtitle is-4">Martin Romuladez</p>
+            </div>
+          </article>
+          <article class="column is-half" id="treasurer">
+            <div class="card-content">
+              <img
+                src="assets/M5HH2ICPPNLDFNOCAIAV6DLZXY.jpg"
+                alt="Treasurer"
+                class="image"
+              />
+              <p class="title is-3">Treasurer</p>
+              <p class="subtitle is-4">Sean Stephen L. Buenavista</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer site-footer">
+      <div class="container columns">
+        <section class="column">
+          <h2 class="has-text-weight-bold is-size-5">Barangay San Francisco</h2>
+          <p>Official community website</p>
+        </section>
+        <nav class="column" aria-label="Footer">
+          <h2 class="has-text-weight-semibold">Pages</h2>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="officials.html">Officials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <address class="column">
+          <h2 class="has-text-weight-semibold">Hall</h2>
+          <p>Barangay Hall, San Francisco</p>
+          <p>Mon–Fri, 8:00 AM – 5:00 PM</p>
+        </address>
+      </div>
+      <p class="has-text-centered is-size-7 mt-4">
+        &copy; 2026 Barangay San Francisco. Built with Bulma CSS.
+      </p>
+    </footer>
+  </body>
+</html>
